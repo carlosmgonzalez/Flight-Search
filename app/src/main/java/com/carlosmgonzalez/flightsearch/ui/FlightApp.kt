@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.detectTapGestures
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -13,12 +14,14 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.FlightTakeoff
 import androidx.compose.material.icons.filled.Mic
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Star
@@ -33,7 +36,6 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.State
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -213,30 +215,20 @@ fun SearchAndShowFlight(
             }
         )
         AnimatedVisibility(searchTerm.isEmpty()) {
-            ListFavoriteFlights(
-                allFavoriteFlight = allFavoriteFlight,
-                allAirports = allAirports,
-                deleteFlightFromFavorite = {
-                    flightViewModel.deleteFlightFromFavorite(it)
-                }
-            )
+            if (allFavoriteFlight.isEmpty()) {
+                EmptyFavoriteFlights()
+            } else {
+                ListFavoriteFlights(
+                    allFavoriteFlight = allFavoriteFlight,
+                    allAirports = allAirports,
+                    deleteFlightFromFavorite = {
+                        flightViewModel.deleteFlightFromFavorite(it)
+                    }
+                )
+            }
         }
     }
 }
-
-//@Composable
-//fun FlightSearch(
-//    modifier: Modifier = Modifier,
-//    searchTerm: String,
-//    setSearchTerm: (term: String) -> Unit,
-//    setTextFieldFocused: (focused: Boolean) -> Unit,
-//    setAirportsFound: (airports: StateFlow<List<AirportEntity>>) -> Unit,
-//    setSelectedAirport: (airport: AirportEntity?) -> Unit,
-//    flightViewModel: FlightViewModel,
-//    airports: State<List<AirportEntity>>,
-//    selectedAirport: AirportEntity?
-//) {
-//}
 
 @Composable
 fun ListFlightsFound(
@@ -412,5 +404,28 @@ fun ListFavoriteFlights(
                 }
             }
         }
+    }
+}
+
+@Composable
+fun EmptyFavoriteFlights(
+    modifier: Modifier = Modifier
+) {
+    Column(
+        modifier = modifier.fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ) {
+        Icon(
+            imageVector = Icons.Default.FlightTakeoff,
+            contentDescription = "Flight",
+            modifier = Modifier.size(70.dp)
+        )
+        Spacer(Modifier.height(10.dp))
+        Text(
+            text = "You don't have any flights in favorites.",
+            fontWeight = FontWeight.Bold
+        )
+        Text("Search for a flight.")
     }
 }
