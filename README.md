@@ -25,11 +25,10 @@
   
   <h2>Project gallery</h2>
   <div class="project-gallery" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
-<!--     <img src="https://res.cloudinary.com/difikt7so/image/upload/v1726670797/android-apps/final-projects-images/react-native/todo-app/eglgtvo33og3lyqatql7.png" alt="Screenshot 3" style="box-shadow: 0 2px 4px rgba(0,0,0,0.1);" width="300" height="580">
-    <img src="https://res.cloudinary.com/difikt7so/image/upload/v1726670797/android-apps/final-projects-images/react-native/todo-app/trxqloijkydptzobjurl.png" alt="Screenshot 2" style="box-shadow: 0 2px 4px rgba(0,0,0,0.1);" width="300" height="580">
-    <img src="https://res.cloudinary.com/difikt7so/image/upload/v1726670797/android-apps/final-projects-images/react-native/todo-app/etuxsefmnznwv6tt06yo.png" alt="Screenshot 3" style="box-shadow: 0 2px 4px rgba(0,0,0,0.1);" width="300" height="580">
-    <img src="https://res.cloudinary.com/difikt7so/image/upload/v1726670798/android-apps/final-projects-images/react-native/todo-app/elwlaivxi61zrw1djqmm.png" alt="Screenshot 3" style="box-shadow: 0 2px 4px rgba(0,0,0,0.1);" width="300" height="580">
-    <img src="https://res.cloudinary.com/difikt7so/image/upload/v1726670797/android-apps/final-projects-images/react-native/todo-app/xtlfepvjzqbkbkgievjs.png" alt="Screenshot 1" style="box-shadow: 0 2px 4px rgba(0,0,0,0.1);" width="300" height="580"> -->
+    <img src="https://res.cloudinary.com/difikt7so/image/upload/v1727645950/android-apps/final-projects-images/flight-search/g1kvuhtrhnicthm2vtdh.png" alt="Screenshot 3" style="box-shadow: 0 2px 4px rgba(0,0,0,0.1);" width="270" height="600">
+    <img src="https://res.cloudinary.com/difikt7so/image/upload/v1727645949/android-apps/final-projects-images/flight-search/pdcxf0nbohfhqgxustg2.png" alt="Screenshot 2" style="box-shadow: 0 2px 4px rgba(0,0,0,0.1);" width="270" height="600">
+    <img src="https://res.cloudinary.com/difikt7so/image/upload/v1727645950/android-apps/final-projects-images/flight-search/ysdpawqxkwjgugukiufx.png" alt="Screenshot 3" style="box-shadow: 0 2px 4px rgba(0,0,0,0.1);" width="270" height="600">
+    <img src="https://res.cloudinary.com/difikt7so/image/upload/v1727645949/android-apps/final-projects-images/flight-search/lzfxaj5geu4zjasndmlh.png" alt="Screenshot 3" style="box-shadow: 0 2px 4px rgba(0,0,0,0.1);" width="270" height="600">
   </div>
 </body>
 </html>
